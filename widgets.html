@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8"> 
+        <title>Chat Application</title> 
+        <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+        <link rel="stylesheet" href="css/app.v1.css">
+        <link rel="stylesheet" href="css/font.css" cache="false">
+		
+        <!--[if lt IE 9]> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/html5.js" cache="false"></script> <script src="js/ie/fix.js" cache="false"></script> <![endif]-->
+    </head>
+    <body>
+        <section class="hbox stretch"> <!-- .aside --> 
+            <aside class="bg-dark aside-sm" id="nav"> 
+                <section class="vbox">
+                    <header class="bg-info dker nav-bar"> 
+                        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="body"> 
+                            <i class="icon-reorder"></i> 
+                        </a> 
+                        <a href="#" class="nav-brand" data-toggle="fullscreen">Chats</a> 
+                        <a class="btn btn-link visible-xs" data-toggle="class:show" data-target=".nav-user">
+                            <i class="icon-comment-alt"></i> 
+                        </a> 
+                    </header> 
+                    <footer class="footer bg-gradient hidden-xs text-center"> 
+                        <a href="modal.lockme.html" data-toggle="ajaxModal" class="btn btn-sm btn-link hide">
+                            <i class="icon-off"></i>
+                        </a> 
+                        <a href="#nav" data-toggle="class:nav-vertical" class="btn btn-sm btn-link"> 
+                            <i class="icon-reorder"></i> 
+                        </a>
+                    </footer>
+                    <section> <!-- user --> 
+                        <div class="lt nav-user hidden-xs pos-rlt"> 
+                            <div class="nav-avatar pos-rlt">
+                                <a href="#" class="thumb-sm avatar animated rollIn" data-toggle="dropdown">
+                                    <img src="images/avatar_default.jpg" alt="" class=""> 
+                                    <span class="caret caret-white"></span> 
+                                </a> 
+                                <ul class="dropdown-menu m-t-sm animated fadeInLeft">
+                                    <span class="arrow top"></span> 
+                                    <li> <a href="#">Settings</a> </li>
+                                    <li> <a href="profile.html">Profile</a> </li> 
+                                    <li> <a href="#"> <span class="badge bg-danger pull-right">3</span> Notifications </a> </li>
+                                    <li class="divider"></li>
+                                    <li> <a href="docs.html">Help</a> </li>
+                                    <li> <a href="signin.html">Logout</a> </li>
+                                </ul> 
+                                <div class="visible-xs m-t m-b"> 
+                                    <a href="#" class="h3">John.Smith</a>
+                                    <p><i class="icon-map-marker"></i> London, UK</p> 
+                                </div> 
+                            </div>
+                            <div class="nav-msg"> 
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <b class="badge badge-white count-n">2</b>
+                                </a>
+                                <section class="dropdown-menu m-l-sm pull-left animated fadeInRight">
+                                    <div class="arrow left"></div> 
+                                    <section class="panel bg-white"> 
+                                        <header class="panel-heading"> 
+                                            <strong>You have <span class="count-n">2</span> notifications</strong> 
+                                        </header>
+                                        <!--<div class="list-group"> 
+                                            <a href="#" class="media list-group-item"> 
+                                                <span class="pull-left thumb-sm"> 
+                                                    <img src="images/avatar.jpg" alt="John said" class="img-circle"> </span>
+                                                <span class="media-body block m-b-none"> Use awesome animate.css<br> 
+                                                    <small class="text-muted">28 Aug 13</small> </span> 
+                                            </a> 
+                                            <a href="#" class="media list-group-item"> 
+                                                <span class="media-body block m-b-none"> 1.0 initial released<br> 
+                                                    <small class="text-muted">27 Aug 13</small> 
+                                                </span>
+                                            </a>
+                                        </div>--> 
+                                        <footer class="panel-footer text-sm"> 
+                                            <a href="#" class="pull-right"><i class="icon-cog"></i></a>
+                                            <a href="#">See all the notifications</a> 
+                                        </footer>
+                                    </section> 
+                                </section> 
+                            </div> 
+                        </div> <!-- / user --> <!-- nav --> 
+                        <nav class="nav-primary hidden-xs"> 
+                            <ul class="nav"> 
+                                <li>
+                                    <a href="index.html"> <i class="icon-eye-open"></i> <span>Contacts</span> </a> 
+                                </li>
+                                <li class="active"> 
+                                    <a href="mail.html"> <b class="badge bg-primary pull-right">3</b> 
+                                        <i class="icon-envelope-alt"></i> <span>Chats</span> 
+                                    </a> 
+                                </li>
+                                <li> <a href="tasks.html"> <i class="icon-tasks"></i> <span>Tasks</span> </a> </li> 
+                                <li> <a href="notes.html"> <i class="icon-pencil"></i> <span>Notes</span> </a> </li>
+
+                            </ul> 
+                        </nav> <!-- / nav -->
+                    </section>
+                </section>
+            </aside> <!-- /.aside --> <!-- .vbox -->
+            <section id="content">
+                <section class="vbox">
+                    <header class="header bg-light dker bg-gradient"> <p>Chat Area</p>
+                    </header> 
+                    <section class=" wrapper">
+                        <div class="row scrollable"> 
+                            <div class="col-lg-6">
+                                <section class="panel"> 
+                                    <header class="panel-heading">Chat</header> 
+                                    <section id="chat" class="chat-list scrollable panel-body"> 
+                                        <article id="chat-id-1" class="chat-item left"> 
+                                            <a href="#" class="pull-left thumb-sm avatar">
+                                                <img src="images/avatar.jpg" class="img-circle">
+                                            </a> 
+                                            <section class="chat-body"> 
+                                                <div class="panel text-sm m-b-none"> 
+                                                    <div class="panel-body">
+                                                        <span class="arrow left">
+
+                                                        </span>hey harris
+                                                    </div>
+                                                </div>
+                                                <small class="text-muted"><i class="icon-ok text-success"></i> 2 minutes ago</small> 
+                                            </section> 
+                                        </article> 
+                                        <article id="chat-id-1" class="chat-item right"> 
+                                            <a href="#" class="pull-right thumb-sm avatar"><img src="images/harris.jpg" class="img-circle"></a>
+                                            <section class="chat-body">
+                                                <div class="panel bg bg-success text-sm m-b-none">
+                                                    <div class="panel-body"> <span class="arrow right"></span>hello
+                                                    </div> 
+                                                </div> 
+                                                <small class="text-muted"><i class="icon-ok text-success"></i> 1 minutes ago</small> 
+                                            </section> 
+                                        </article>
+										<!-- chat form -->
+                                        
+                                    </section>
+									
+                                </section> 
+								 <article class="chat-item" id="chat-form"> 
+                                            <a class="pull-left thumb-sm avatar"><img src="images/avatar.jpg" class="img-circle"></a> 
+                                            <section class="chat-body"> 
+                                               <!-- <form  class="m-b-none" id="send-message"> -->
+                                                    <div class="input-group"> 
+                                                        <input type="text" class="form-control" id="message" placeholder="Say something">
+                                                        <span class="input-group-btn"> 
+                                                            <input class="btn btn-info" id="send" value="SEND" type="button"/>
+                                                        </span> 
+                                                    </div> 
+                                               <!-- </form>-->
+                                            </section>
+                                    </article>
+                            </div> 
+
+                        </div> 
+                    </section> 
+                </section>
+                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="body"></a> 
+            </section> <!-- /.vbox -->
+        </section>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+		function getCookie(c_name)
+			{
+				var c_value = document.cookie;
+				var c_start = c_value.indexOf(" " + c_name + "=");
+				if (c_start == -1)
+				{
+					c_start = c_value.indexOf(c_name + "=");
+				}
+				if (c_start == -1)
+				{
+					c_value = null;
+				}
+				else
+				{
+					c_start = c_value.indexOf("=", c_start) + 1;
+				var c_end = c_value.indexOf(";", c_start);
+				if (c_end == -1)
+				{
+					c_end = c_value.length;
+				}
+					c_value = unescape(c_value.substring(c_start,c_end));
+				}
+				return c_value;
+			}
+		jQuery(function($){
+			var socket = io.connect('http://localhost:3000');
+			
+			var $messageBox = $('#message');
+			var $chat = $('#chat');
+			
+			$("#send").on("click", function(e){
+				e.preventDefault();
+				
+				socket.emit('send message', $messageBox.val());
+				$messageBox.val('');
+			});
+			var c_name = "username";
+			socket.on('chat-send',getCookie(c_name));
+			
+			socket.on('new message', function(data){
+				$chat.append('<article id="chat-id-2" class="chat-item left">' + 
+                                            '<a href="#" class="pull-left thumb-sm avatar">' +
+                                                '<img src="images/avatar.jpg" class="img-circle">' +
+                                            '</a>' 
+                                            +'<section class="chat-body">' 
+                                                + '<div class="panel text-sm m-b-none"> '
+                                                   +' <div class="panel-body">'
+                                                        +'<span class="arrow left">'
+
+                                                      + ' </span> '+ data.msg +
+                                                    '</div>'
+                                                +'</div>'
+                                                +'<small class="text-muted"><i class="icon-ok text-success"></i>'+ data.nick +'</small>' 
+                                            +'</section> '
+                                        +'</article>');
+			});
+		});
+	</script>
+        <script src="css/app.v1.js"></script> <!-- Bootstrap --> <!-- App --> 
+    </body>
+</html>
